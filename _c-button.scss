@@ -1,0 +1,182 @@
+/* =============================================
+CAEd Button - .c-btn
+============================================= */
+.c-btn {
+    align-items: center;
+    border-radius: $global-radius;
+    display: inline-flex;
+    font-size: rem(14);
+    font-weight: 400;
+    height: rem(40);
+    justify-content: center;
+    line-height: rem(14);
+    padding: 2 * $global-module-size 4 * $global-module-size;
+    text-decoration: none;
+    transition: transform 1s;
+
+  & i {
+      align-items: center;
+      display: none;
+      justify-content: center;
+      padding: 0;
+    }
+  /* Emphasis
+  -------------------------------------------------- */
+  /* primary */
+  &--primary {
+      background: var(--color-theme-primary);
+      border: none;
+      color: var(--color-theme-on-primary);
+
+    &:hover {
+        background: var(--color-theme-primary-dark);
+        color: var(--color-theme-on-primary);
+      }
+    }
+  /* secondary */
+  &--secondary {
+      background: var(--color-theme-secondary);
+      border: none;
+      color: var(--color-theme-on-secondary);
+
+    &:hover {
+        background: var(--color-theme-secondary-dark);
+        color: var(--color-theme-on-secondary);
+      }
+    }
+  /* outline */
+  &--outline {
+      background: var(--color-theme-base-white);
+      border: 1px solid var(--color-theme-base-lighter);
+      color: var(--color-theme-base-dark);
+
+    &:hover {
+        background: var(--color-theme-base-lightest);
+        color: var(--color-theme-base-dark);
+      }
+    }
+  /* ghost */
+  &--ghost {
+      background: transparent;
+      border: none;
+      color: var(--color-theme-base-dark);
+
+    &:hover {
+        background: var(--color-theme-base-lightest);
+      }
+    }
+  /* Communication
+  -------------------------------------------------- */
+  /* right-icon */
+  &--right-icon {
+      gap: rem(16);
+      justify-content: space-between;
+
+    & i {
+        display: inline;
+        font-size: rem(16);
+      }
+    &.c-btn--s {
+        gap: rem(16);
+      }
+    }
+  /* right-icon */
+  &--left-icon {
+      flex-direction: row-reverse;
+      gap: rem(16);
+      justify-content: space-between;
+
+    & i {
+        display: inline;
+        font-size: rem(16);
+      }
+    &.c-btn--s {
+        gap: rem(16);
+      }
+    }
+  /* icon-only */
+  &--icon-only {
+      align-items: center;
+      border-radius: 100%;
+      font-size: 0;
+      justify-content: center;
+      padding: 0;
+      width: rem(40);
+
+    & i {
+        display: inline;
+        font-size: rem(20);
+      }
+    &.c-btn--s {
+        font-size: 0;
+        width: rem(32);
+      }
+    }
+  /* Conditions
+  -------------------------------------------------- */
+  /* disabled */
+  &--disabled {
+      background-color: var(--color-theme-base-lighter);
+      color: var(--color-theme-base);
+      cursor: not-allowed !important;
+
+    &:hover {
+        background-color: var(--color-theme-base-light);
+        color: var(--color-theme-base);
+        cursor: not-allowed !important;
+      }
+    }
+  /* disabled */
+  &--danger {
+    &.c-btn--primary {
+        background-color: var(--color-semantic-danger);
+        color: var(--color-theme-base-white);
+
+      &:hover {
+          background-color: var(--color-semantic-danger-dark);
+          color: var(--color-theme-base-white);
+        }
+      }
+    &.c-btn--secondary {
+        background-color: var(--color-semantic-danger);
+        color: var(--color-theme-base-white);
+
+      &:hover {
+          background-color: var(--color-semantic-danger-dark);
+          color: var(--color-theme-base-white);
+        }
+      }
+    &.c-btn--outline {
+        background: var(--color-theme-base-white);
+        border: 1px solid var(--color-semantic-danger);
+        color: var(--color-semantic-danger);
+
+      &:hover {
+          background: var(--color-semantic-danger-light);
+          color: var(--color-semantic-danger);
+        }
+      }
+    &.c-btn--ghost {
+        background: transparent;
+        border: none;
+        color: var(--color-semantic-danger-dark);
+
+      &:hover {
+          background: var(--color-semantic-danger-light);
+        }
+      }
+    }
+  /* hide */
+  &--hide {
+      display: none;
+    }
+  /* Sizes
+  -------------------------------------------------- */
+  /* small-button */
+  &--s {
+      font-size: rem(13);
+      height: 32px;
+      min-width: 32px;
+    }
+  }
+/* ============  End of CAEd Button  ============= */
